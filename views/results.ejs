@@ -1,0 +1,16 @@
+<% include partials/header.ejs %>
+
+  <h3>Results Page</h3>
+  <ul class="collection">
+    <% data["Search"].forEach(function(movie){ %>
+      <li class="collection-item">
+        <%= movie["Title"]; %> -
+          <%= movie["Year"]; %>
+      </li>
+
+      <% }); %>
+  </ul>
+
+  <a href="/" class="btn">Search again</a>
+
+  <% include partials/footer.ejs %>
